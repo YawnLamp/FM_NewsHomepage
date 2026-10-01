@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+.header {
+  display: flex;
+  padding: 8em 6em 3em;
+  gap: 650px;
+  span {
+    display: flex;
+    gap: 40px;
+    padding-top: 0.5em;
+    a {
+      text-decoration: none;
+      color: hsl(236, 13%, 42%);
+    }
+    a:hover {
+      cursor: pointer;
+      color: hsl(35, 77%, 62%);
+    }
+  }
+}
