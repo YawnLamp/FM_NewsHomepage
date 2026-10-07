@@ -49,7 +49,7 @@ img {
 
 .center-wrapper {
   display: flex;
-  gap: 35px;
+  gap: 30px;
   padding: 0 6em 2em;
 }
 
@@ -60,16 +60,24 @@ img {
     grid-column-start: 1;
     grid-column-end: span 2;
   }
+  .desktop-image {
+    height: 18em;
+    width: 54em;
+  }
+  .mobile-image {
+    display: none;
+  }
   .main-title {
     font-weight: 800;
     font-size: 1.6em;
     min-inline-size: 15ch;
+    padding-top: 1em;
   }
   .main-text {
     display: flex;
     flex-direction: column;
     padding-top: 2em;
-    padding-left: 3.5em;
+    padding-left: 2em;
     padding-right: 0.5em;
     p {
       color: hsl(236, 13%, 42%);
@@ -106,7 +114,7 @@ img {
   h3 {
     color: hsl(36, 100%, 99%);
     font-size: 1.05em;
-    padding-top: 1em;
+    padding-top: 1.5em;
   }
   p {
     color: hsl(236, 13%, 42%);
@@ -138,17 +146,18 @@ img {
   img {
     height: 150px;
     width: auto;
-    padding-top: 1.4em;
+    padding-top: 0.5em;
   }
   h2 {
     color: hsl(5, 85%, 63%);
     font-size: 1.7em;
     line-height: 0.8em;
+    padding-top: 0.3em;
   }
   h3 {
     color: hsl(240, 100%, 5%);
     font-weight: 800;
-    line-height: 0.8em;
+    line-height: 1em;
   }
   a {
     text-decoration: none;
@@ -161,5 +170,65 @@ img {
     color: hsl(236, 13%, 42%);
     max-inline-size: 22ch;
     line-height: 1.6em;
+  }
+}
+
+@media (width <=500px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .center-wrapper {
+    flex-direction: column;
+  }
+  .main-story-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-left: -40%;
+    .desktop-image {
+      display: none;
+    }
+    .mobile-image {
+      display: inline !important;
+      min-width: 375px;
+      min-height: 375px;
+    }
+    .main-title {
+      min-inline-size: 20ch;
+      padding-top: 1em;
+    }
+    .main-text {
+      padding-top: 0;
+      padding-left: 0;
+      margin-right: -10%;
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+  .sidebar {
+    min-width: 375px;
+    padding-left: 0;
+    margin-left: -40%;
+    h2 {
+      padding-left: 1em;
+    }
+    h3 {
+      padding-left: 1em;
+    }
+    p {
+      padding-left: 1em;
+    }
+    .sidebar-divider {
+      border-bottom: hsl(240, 100%, 5%);
+    }
+  }
+  .top3-stories {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+    gap: 15px;
   }
 }
