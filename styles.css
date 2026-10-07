@@ -178,6 +178,17 @@ img {
     display: flex;
     flex-direction: column;
   }
+  .header {
+    padding-left: 1em;
+    gap: 200px;
+    .header-links {
+      display: none;
+    }
+    .dropdown {
+      position: relative;
+      background-color: hsl(36, 100%, 99%);
+    }
+  }
   .center-wrapper {
     flex-direction: column;
   }
